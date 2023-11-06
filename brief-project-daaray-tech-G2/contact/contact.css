@@ -1,0 +1,151 @@
+#contact {
+    width: 90%;
+    margin: auto;
+    padding: 0 10%;
+}
+.banner {
+    height: 700px;
+    width: 100%;
+    background-image: url("../public/images/banner.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.bannerOpacity {
+    height: 100%;
+    width: 100%;
+    background-color: #231f1b91;
+}
+.contact-title .icon-title {
+    color: var(--baseColor);
+    animation: iconima 200ms linear;
+}
+/* @keyframes iconima {
+    from {
+        position: relative;
+        left: -70px;
+    }
+    to {
+        position: relative;
+        left: 0;
+    }
+} */
+.chemin-cours {
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    color: white;
+    font-weight: bolder !important;
+    gap: 10px;
+}
+
+.chemin-cours h4:first-child {
+    color: var(--baseColor);
+    font-weight: bolder !important;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 32px;
+}
+
+.chemin-cours h4:last-child {
+    position: relative;
+    font-size: 36px;
+    top: 5px;
+}
+
+.chemin-cours h5 {
+    margin: 30px 0;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.chemin-cours p {
+    width: 46%;
+    line-height: 2;
+    font-weight: 600;
+    font-size: 20px;
+}
+.contact-title {
+    margin-top: 30px;
+}
+.contact-title h2 {
+    color: var(--zeus);
+    animation: texanima 400ms linear 200ms;
+}
+/* @keyframes texanima {
+    from {
+        position: relative;
+        top: -90px;
+    }
+
+    to {
+        position: relative;
+        top: 0;
+    }
+} */
+.contact-title i {
+    font-size: 36px;
+}
+.contact-medias {
+    text-align: center;
+}
+.contact-form {
+    border-top: 4px solid var(--zeus);
+    box-shadow: 0 0 2px;
+    margin: 12px 15%;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+}
+.contact-float {
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -0px;
+    background-color: var(--secondColor);
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+.contact-float a {
+    text-decoration: none;
+    color: black;
+}
+.contact-float a:hover {
+    color: var(--baseColor);
+}
+.contact-float {
+    display: none;
+}
+.media-over {
+    cursor: pointer;
+}
+@media screen and (max-width: 991.98px) {
+    #contact {
+        padding: 0;
+    }
+    .contact-form {
+        margin: 12px 5%;
+    }
+}
+.contact-form input,
+.contact-form textarea {
+    margin: 0 10px;
+    border-radius: 10px;
+    text-indent: 30px;
+    outline-color: var(--baseColor);
+    border: 1px solid var(--zeus);
+    box-shadow: 0 0 2px;
+}
+.contact-form input {
+    height: 50px;
+}
+.contact-form textarea {
+    padding-top: 10px;
+    text-indent: 0;
+    padding-left: 30px;
+}
+.contact-form input:last-child {
+    background-color: var(--baseColor);
+    color: white;
+    border-color: var(--baseColor);
+}
+.contact-form textarea {
+}

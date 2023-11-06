@@ -1,0 +1,14 @@
+:root {
+    --baseColor: #e45923;
+    --secondColor: #f1daa6;
+    --zeus: #231f1b;
+    --poussierEtoile: #9d9d9c;
+    --titreSectionSize: 36px;
+    --titreSectionGraisse: 700;
+    --defaulFontSize: 16px;
+  }
+.condition-utilisation h1{
+    color:var(--baseColor);
+    font-size: var(--titreSectionSize);
+    font-weight: var(--titreSectionGraisse);
+}

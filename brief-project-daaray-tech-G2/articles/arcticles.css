@@ -1,0 +1,597 @@
+.banner {
+    height: 700px;
+    width: 100%;
+    background-image: url("https://img.freepik.com/vecteurs-libre/fond-plat-pour-celebration-dia-del-periodista_23-2149525339.jpg?size=626&ext=jpg&ga=GA1.1.224077371.1696859023&semt=ais");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.bannerOpacity {
+    height: 100%;
+    width: 100%;
+    background-color: #231f1bd5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* styles.css */
+#searchInput {
+    width: 15%;
+    padding: 10px;
+    margin: 15px auto;
+}
+
+#itemsList li {
+    list-style: none;
+    margin: 5px;
+}
+
+.bannerOpacity h1{
+    color: var(--baseColor);
+    font-weight: var(--titreSectionGraisse);
+    font-size: 45px;
+    z-index:90;
+}
+:root {
+    --baseColor : #E45923;
+    --secondColor : #F1DAA6;
+    --zeus : #231F1B;
+    --poussierEtoile : #9D9D9C;
+    --titreSectionSize : 36px;
+    --titreSectionGraisse : 700;
+    --defaulFontSize : 16px;
+}
+
+*{
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: var(--defaulFontSize);
+    margin: 0 auto;
+}
+/* .sectionArticles{
+    margin: 0 auto;
+    width: 80%;
+    height: 125vh;
+} */
+#articleItems{
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+}
+
+#imgTop{
+    width: 287px;
+    height: 180px;
+}
+.cartArticle{
+    box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.37);
+    /* border-radius: 10%; */
+    /* border: solid black 1px; */
+    width: 18em; 
+    /* height: 80px; */
+}
+.cartDate{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#htitre{
+    color:var(--baseColor) ;
+    font-size: 20px;
+    font-weight: bold;
+}
+#pdiscription{
+    font-size:var(--defaulFontSize);
+
+}
+#popupButton{
+    width: 75px;
+    height: 25px;
+    border-radius: 35%;
+    color: var(--baseColor);
+    font-size: var(--defaulFontSize);
+    border: none;
+}
+.voirplus{
+    width: 75px;
+    height: 25px;
+    border-radius: 35%;
+    color: var(--baseColor);
+    font-size: var(--defaulFontSize);
+    border: none;
+}
+#popupButton{
+    width: 75px;
+    height: 25px;
+    border-radius: 35%;
+    color: var(--baseColor);
+    font-size: var(--defaulFontSize);
+    border: none;
+}
+
+
+/* stylisation  du popup voir plus + commentaires */
+
+
+
+.popup1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.popup2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.popup3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.popup4 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.popup5 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+.popup6 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 80%;
+    height: 95vh;
+    /* max-width: 400px; */
+    margin: 0 auto;
+    /* margin-top: 20%; */
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.divContainDArticle{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+    height: 85vh;
+    margin: 0 auto;
+
+}
+.comContain{
+    /* border: 1px solid rgb(53, 8, 8); */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+.divDetailArticles{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.divCommentaire{
+    /* border: 1px solid rgb(255, 0, 76); */
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+    /* overflow-y: auto; */
+}
+.divinputComenter{
+    /* border: 1px solid rgb(0, 123, 255); */
+    width: 100%;
+    height: 30%; 
+    margin-left: 15px;
+}
+#submit{
+    background-color: var(--baseColor);
+    color: #fff;
+}
+.divDetailArticles h4{
+    color: var(--baseColor);
+    font-size: var(--defaulFontSize);
+
+}
+.divDetailArticles iframe{
+    width: 470px;
+    height: 450px;
+    /* margin: 0 auto; */
+
+}
+.divDetailArticles p{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: var(--defaulFontSize);
+}
+.divDetailArticles h6{
+    margin-left: 15px;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: var(--defaulFontSize);
+    color: var(--baseColor);
+}
+
+.divimgComentateur{
+    /* border: 1px solid rgb(139, 19, 113);  */
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto;
+    width: 90%;
+    height:35%;
+    font-size: medium;
+}
+.divcomment{
+    /* border: solid 1px lawngreen; */
+    width: 90%;
+    height: 47%;
+    margin: 0 auto;
+    margin: 15px;
+    font-size: medium;
+}
+.avatar{
+    /* border: 1px solid rgb(139, 19, 113);  */
+    display: flex;
+    /* justify-content: space-around; */
+    /* margin: 15px auto; */
+    width: 75%;
+    height:100%; 
+    font-size: medium;
+}
+.divComtext{
+    /* border: 1px solid rgb(139, 19, 113);  */
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto;
+    width: 90%;
+    height:45%;
+    font-size: medium;
+}
+/* mediaqueries */
+
+
+@media screen and (max-width:1024px){
+    #articleItems{
+        margin: 0 auto;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        font-size: medium;
+    
+}
+
+#imgTop{
+    width: 250px;
+    height: 180px;
+}
+.cartArticle{
+    box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.37);
+    /* border: solid black 1px; */
+    width: 18em; 
+    font-size: medium;
+    /* height: 80px; */
+}
+
+        
+
+}
+@media screen and (max-width:780px){
+    #articleItems{
+        margin: 0 auto;
+        justify-content: center;
+        display: grid; 
+        grid-template-columns: 1fr;
+        /* column-gap: 10px; */
+        /* row-gap: 10px; */
+        flex-wrap: wrap;
+        font-size: medium;
+    
+}
+
+}
+
+/* mediaqueriePOPUP */
+
+
+
+@media screen and (max-width:1024px){
+
+
+    .popup1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup3 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup4 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup5 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup6 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    
+    .popup-content {
+        background-color: #fff;
+        width: 80%;
+        height: 95vh;
+        /* max-width: 400px; */
+        margin: 0 auto;
+        /* margin-top: 20%; */
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .divContainDArticle{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 90%;
+        height: 85vh;
+        margin: 0 auto;
+        overflow: auto;
+    
+    }
+    .comContain{
+        /* border: 1px solid rgb(53, 8, 8); */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        margin: 0 auto;
+        /* justify-content: center; */
+        /* text-align: center; */
+    }
+    
+    .divDetailArticles{
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        margin: 0 auto;
+        justify-content: center;
+        /* text-align: center; */
+    }        
+
+}
+@media screen and (max-width:780px){
+    .popup1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup3 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup4 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup5 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    .popup6 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+    
+    .popup-content {
+        background-color: #fff;
+        width: 80%;
+        height: 95vh;
+        /* max-width: 400px; */
+        margin: 0 auto;
+        /* margin-top: 20%; */
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .divContainDArticle{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 90%;
+        height: 85vh;
+        margin: 0 auto;
+        overflow: auto;
+    
+    }
+    .comContain{
+        /* border: 1px solid rgb(53, 8, 8); */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        margin: 0 auto;
+        /* justify-content: center; */
+        /* text-align: center; */
+    }
+    
+    .divDetailArticles{
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        margin: 0 auto;
+        justify-content: center;
+        /* text-align: center; */
+    }
+
+}

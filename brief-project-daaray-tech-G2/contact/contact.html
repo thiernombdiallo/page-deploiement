@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Lien booststrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--  -->
+    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="banner">
+        <div class="chemin-cours">
+            <div class="chemin-c d-flex align-items-center gap-4">
+                <h4>Contact</h4>
+            </div>
+            <h5 style="margin-top: 20%; font-size: 2em;">Daaray technologie est à votre disposition</h5>
+            <p></p>
+        </div>
+        <div class="bannerOpacity">
+        </div>
+    </div>
+    <section id="contact">
+        <div class="contact-title d-flex align-items-center gap-4">
+            <div class="icon-title"><i class="fa-solid fa-code"></i></div>
+            <h2>Contact</h2>
+        </div>
+        <div class="contact-medias justify-content-center d-flex gap-4">
+            <i class="fa-solid fa-envelope media-over"></i>
+            <div class="contact-float"><a href="mailto:djibysec8@gmail.com">djibysec8@gmail.com</a></div>
+            <i class="fa-solid fa-phone media-over"></i>
+            <div class="contact-float"><a href="https://wa.me/+221774065868">774065868</a></div>
+            <i class="fa-solid fa-map-pin media-over"></i>
+            <div class="contact-float"><a href="https://maps.app.goo.gl/ogXfQ6XPz3qQhYEZ6">DAKAR, SENEGAL</a></div>
+        </div>
+        <script>
+            let lsMedia = document.querySelectorAll('.media-over');
+            let mdOver = document.querySelectorAll('.contact-float');
+
+            lsMedia[0].addEventListener('mouseover', function () {
+                mdOver[0].style.display = 'block';
+                mdOver[1].style.display = 'none';
+                mdOver[2].style.display = 'none';
+            });
+            lsMedia[1].addEventListener('mouseover', function () {
+                mdOver[1].style.display = 'block';
+                mdOver[0].style.display = 'none';
+                mdOver[2].style.display = 'none';
+            });
+            lsMedia[2].addEventListener('mouseover', function () {
+                mdOver[2].style.display = 'block';
+                mdOver[0].style.display = 'none';
+                mdOver[1].style.display = 'none';
+            });
+
+            for (let i = 0; i < lsMedia.length; i++) {
+                lsMedia[i].addEventListener('click', function () {
+                    mdOver[i].style.display = 'none';
+                })
+            }
+
+
+        </script>
+        <div class="contact-form d-flex justify-content-center">
+            <form action="" class="d-flex flex-column w-100 gap-4">
+                <input type="text" placeholder="Nom complet" pattern="[A-Za-z0-9]+" required>
+                <input type="email" placeholder="Adresse électronique"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                <input type="submit" value="Envoyer mon message">
+            </form>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script src="cours.js"></script>
+    <script src="../public/scripts.js"></script>
+</body>
+
+</html>
